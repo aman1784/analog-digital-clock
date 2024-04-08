@@ -1,0 +1,133 @@
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+body::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('img.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* Adjust the opacity as needed, e.g., 0.75 for less transparency */
+  opacity: 0.75;
+  /* Add a blur effect */
+  filter: blur(10px); /* Adjust the pixel value as needed */
+  z-index: -1;
+}
+
+.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 10px solid #333;
+  border-radius: 40%;
+}
+
+.hour-hand,
+.minute-hand,
+.second-hand {
+  position: absolute;
+  background: black;
+}
+
+.hour-hand {
+  width: 5px;
+  height: 50px;
+  top: 25%;
+  left: 49%;
+  transform-origin: 50% 100%;
+  background-color: yellow;
+}
+
+.minute-hand {
+  width: 4px;
+  height: 70px;
+  top: 15%;
+  left: 49%;
+  transform-origin: 50% 100%;
+  background: green;
+}
+
+.second-hand {
+  width: 3px;
+  height: 80px;
+  top: 10%;
+  left: 49%;
+  transform-origin: 50% 100%;
+  background: red;
+}
+
+.center-circle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: rgb(214, 127, 13);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#digital-clock {
+  margin-top: 40px;
+  font-family: Arial, sans-serif;
+  font-size: xx-large;
+  color: #410cdded;
+  padding: 10px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+#digital-clock:hover {
+  color: #3b1f03;
+  box-shadow: 2px 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Media Queries for responsiveness */
+
+@media only screen and (max-width: 600px) {
+  .clock {
+    width: 150px;
+    height: 150px;
+  }
+
+  .hour-hand {
+    width: 4px;
+    height: 40px;
+    top: 25%;
+  }
+
+  .minute-hand {
+    width: 3px;
+    height: 50px;
+    top: 17%;
+  }
+
+  .second-hand {
+    width: 2px;
+    height: 60px;
+    top: 10%;
+  }
+
+  .center-circle {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .digital-clock {
+    font-size: large;
+  }
+}
