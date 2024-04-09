@@ -33,6 +33,15 @@ body::before {
   height: 200px;
   border: 10px solid #333;
   border-radius: 40%;
+  animation: clockAnimation 2s ease-in-out infinite alternate;
+}
+
+@keyframes clockAnimation {
+  from {
+    transform: scale(1);
+    border-color: rgb(174, 197, 68);
+    border-radius: 50%;
+  }
 }
 
 .hour-hand,
