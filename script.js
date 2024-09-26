@@ -16,15 +16,14 @@ function setClock() {
   minuteHand.style.transform = `rotate(${minuteDegree}deg)`;
   secondHand.style.transform = `rotate(${secondDegree}deg)`;
 
-
-  // ==================================================
   // Digital clock
 
   const digitalClock = document.getElementById("digital-clock");
   const ampm = hours >= 12 ? "PM" : "AM";
   const hour12 = hours % 12 || 12;
 
-  const options = { month: "short", day: "2-digit", year: "numeric" }; // { day: '2-digit', month: '2-digit', year: 'numeric' };
+  const options = { month: "short", day: "2-digit", year: "numeric" }; 
+  // { day: '2-digit', month: '2-digit', year: 'numeric' };
 
   const weekdays = [
     "Sunday",
