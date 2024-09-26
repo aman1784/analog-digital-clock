@@ -28,6 +28,3 @@ No installation is required. Just ensure you have a modern web browser.
 
 Feel free to contribute by creating issues or submitting pull requests. All contributions are welcome!
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
